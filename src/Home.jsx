@@ -4,11 +4,16 @@ import { Link } from "react-router-dom";
 import playstore from "./assets/playstore.png";
 import apple from "./assets/apple.png";
 import TrendingApps from "./TrendingApps";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const buttonClass =
     "flex border-1 border-gray-400 w-[130px] text-center items-center rounded-[4px] hover:cursor-pointer hover:scale-[1.04] duration-500 hover:shadow-xl hover:shadow-gray-500";
   const iconImgClass = "w-[30px] h-[30px] mx-2";
+  const btnclick =()=>{
+    navigate(`/apps`);
+  }
  
   return (
     <div>
@@ -80,6 +85,9 @@ const Home = () => {
         </div>
       </div>
       <TrendingApps></TrendingApps>
+   <button onClick={btnclick} className="p-2 mb-2 w-[200px] mt-[3rem] rounded-[5px] bg-[#54CF68] text-white transition-all duration-500 hover:scale-[1.04] hover:shadow-[0_0_15px_#54CF68]">
+  Show All
+</button>
     </div>
   );
 };

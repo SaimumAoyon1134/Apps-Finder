@@ -8,23 +8,27 @@ import Install from "./Install.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppDetails from "./AppDetails.jsx";
 import { InstallProvider } from "./App.jsx";
+import PageNotFound from "./PageNotFound.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     children: [
-      { path: '/', element: <Home /> },
-      { path: '/apps', element: <Apps /> },
-      { path: '/installation', element: <Install /> },
-      { path: '/apps/:id', element: <AppDetails/>},
+      { path: "/", element: <Home /> },
+      { path: "/apps", element: <Apps /> },
+      { path: "/installation", element: <Install /> },
+      { path: "/apps/:id", element: <AppDetails /> },
+      {
+        path: "*",
+        element: <PageNotFound />,
+      },
     ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-   
     <InstallProvider>
       <RouterProvider router={router} />
     </InstallProvider>

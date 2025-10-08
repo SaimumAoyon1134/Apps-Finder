@@ -1,8 +1,10 @@
+
 import React, { Suspense, useState, useEffect } from "react";
 import appData from "../appData";
 import AppCard from "./appCard";
 import { useNavigate } from "react-router-dom";
 import Spinner from "./Spinner"; 
+import NotFound from "./NotFound";
 
 const Apps = () => {
   const navigate = useNavigate();
@@ -13,12 +15,10 @@ const Apps = () => {
     navigate(`/apps/${app.id}`);
   };
 
-
   const filteredApps = appData.filter((app) =>
     app.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
- 
   useEffect(() => {
     if (searchTerm.trim() !== "") {
       setIsSearching(true);
@@ -30,7 +30,7 @@ const Apps = () => {
   }, [searchTerm]);
 
   return (
-    <div>
+    <div className="bg-[rgb(245,245,245)] py-10">
       <div className="text-4xl font-bold text-center mt-20">
         Our All Applications
       </div>
@@ -62,16 +62,17 @@ const Apps = () => {
           </div>
         ) : (
           <Suspense fallback={<div>Loading...</div>}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-5 mx-[2rem]">
-              {filteredApps.map((app) => (
-                <AppCard key={app.id} cardClick={cardClickHandler} app={app} />
-              ))}
-              {filteredApps.length === 0 && (
-                <p className="text-center col-span-full text-gray-500">
-                  No apps found.
-                </p>
-              )}
-            </div>
+            {filteredApps.length > 0 ? (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-5 mx-[2rem]">
+                {filteredApps.map((app) => (
+                  <AppCard key={app.id} cardClick={cardClickHandler} app={app} />
+                ))}
+              </div>
+            ) : (
+              <div className="flex justify-center items-center">
+                <NotFound />
+              </div>
+            )}
           </Suspense>
         )}
       </div>
