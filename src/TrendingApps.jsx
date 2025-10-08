@@ -9,7 +9,7 @@ const TrendingApps = () => {
   const navigate = useNavigate();
   const cardClickHandler = (app) => {
    
-    navigate(`/app/${app.id}`);
+    navigate(`/apps/${app.id}`);
   };
   return (
     <div className="pt-10 pb-20 bg-[rgb(245,245,245)]">

@@ -10,7 +10,7 @@ const Apps = () => {
   const [isSearching, setIsSearching] = useState(false);
 
   const cardClickHandler = (app) => {
-    navigate(`/app/${app.id}`);
+    navigate(`/apps/${app.id}`);
   };
 
 
