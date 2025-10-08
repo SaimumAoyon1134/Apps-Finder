@@ -7,12 +7,12 @@ import XIcon from "@mui/icons-material/X";
 const Footer = () => {
   return (
     <div className="bg-[#001931] text-white p-[3rem] mt-2">
-      <div className="flex justify-between mb-[1rem]">
-        <div className="flex align-center items-center">
+      <div className="flex justify-between mb-[1rem] flex-col md:flex-row">
+        <div className="md:flex hidden  align-center items-center">
           <img src={imageCopy} className="w-[30px] rounded-1xl" alt="" />
           <p className="px-[1rem]">Apps Finder</p>
         </div>
-        <div className="w-[30%]">
+        <div className="md:w-[30%]">
           Apps Finder is a modern web application designed to help users
           explore, search, and install a wide range of applications developed by
           us. 
