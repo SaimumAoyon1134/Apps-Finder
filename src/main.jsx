@@ -6,6 +6,7 @@ import Home from "./Home.jsx";
 import Apps from "./Apps.jsx";
 import Install from "./Install.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AppDetails from "./AppDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { path: '', element: <Home /> },
       { path: 'apps', element: <Apps /> },
       { path: 'installation', element: <Install /> },
+      { path: 'app/:id', element: <AppDetails/>},
     ],
   },
 ]);

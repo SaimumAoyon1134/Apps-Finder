@@ -9,7 +9,7 @@ export class Navbar extends Component {
     const activeClass = "font-bold text-[#9F62F2] ;";
     const normalClass = "text-gray-900 hover:underline";
     return (
-      <nav className="bg-white flex  flex-col md:flex-row justify-between">
+      <nav className="bg-white flex  flex-col md:flex-row justify-between px-[2rem] pt-[2rem]">
         <div className="flex flex-wrap justify-center md:justify-between items-center  ">
           <Link to="/" className="flex items-center">
             <img
