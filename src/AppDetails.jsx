@@ -6,6 +6,7 @@ import StarIcon from "@mui/icons-material/Star";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, ResponsiveContainer } from "recharts";
 import { InstallContext } from "./App"
+import NotFound from "./NotFound";
 
 const AppDetails = () => {
   const { installedApps, installApp } = useContext(InstallContext); 
@@ -15,6 +16,10 @@ const AppDetails = () => {
 
   const { id } = useParams();
   const targetApp = appData.find((app) => app.id == id);
+   if (!targetApp) {
+
+    return <NotFound />;
+  }
 
   const isInstalled = installedApps.find((app) => app.id === targetApp.id);
 

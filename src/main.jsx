@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppDetails from "./AppDetails.jsx";
 import { InstallProvider } from "./App.jsx";
 import PageNotFound from "./PageNotFound.jsx";
+import NotFound from "./NotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,8 @@ const router = createBrowserRouter([
       { path: "/apps", element: <Apps /> },
       { path: "/installation", element: <Install /> },
       { path: "/apps/:id", element: <AppDetails /> },
+      
+
       {
         path: "*",
         element: <PageNotFound />,
