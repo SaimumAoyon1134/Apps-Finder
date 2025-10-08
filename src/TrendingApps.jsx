@@ -2,7 +2,8 @@ import React, { Suspense } from "react";
 import appData from "../appData";
 import AppCard from "./appCard";
 import { useNavigate } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const TrendingApps = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const TrendingApps = () => {
     navigate(`/app/${app.id}`);
   };
   return (
-    <div className="pt-10 bg-[rgb(245,245,245)]">
+    <div className="pt-10 pb-20 bg-[rgb(245,245,245)]">
       <p className="text-3xl font-bold ">Trending Apps</p>
       <p className="text-sm  font-light">
         Explore All Trending Apps on the Market developed by us

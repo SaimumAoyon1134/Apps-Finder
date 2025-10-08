@@ -10,7 +10,7 @@ const InstallAppCard = ({ app }) => {
   const { uninstallApp } = useContext(InstallContext);
 
   return (
-    <div className="bg-white m-4 flex flex-col md:flex-row p-3 justify-between items-center">
+    <div className="bg-white mx-10 flex flex-col md:flex-row p-3 justify-between items-center">
       <div className="flex flex-col md:flex-row items-center">
         <img src={app.image} alt="" className="w-[80px]" />
         <div className="flex flex-col ml-4">

@@ -15,7 +15,9 @@ const Install = () => {
         <p className="text-center text-sm px-20 text-gray-400 font-light mt-5">
           Explore All Trending Apps on the Market developed by us
           </p>
+          <p className="text-left pl-10 text-2xl font-bold">{installedApps.length} Apps Found </p>
           <div className="flex flex-col space-y-3  ">
+            
             {installedApps.map((app) => (
               <InstallAppCard key={app.id} app={app} />
             ))}

@@ -7,9 +7,9 @@ import TrendingApps from "./TrendingApps";
 
 const Home = () => {
   const buttonClass =
-    "flex border-1 border-gray-400 w-[130px] text-center items-center rounded-[4px] hover:cursor-pointer";
+    "flex border-1 border-gray-400 w-[130px] text-center items-center rounded-[4px] hover:cursor-pointer hover:scale-[1.04] duration-500 hover:shadow-xl hover:shadow-gray-500";
   const iconImgClass = "w-[30px] h-[30px] mx-2";
-
+ 
   return (
     <div>
       <div className="text-4xl font-bold text-center mt-10 ">

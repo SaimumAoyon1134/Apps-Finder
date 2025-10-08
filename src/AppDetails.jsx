@@ -52,7 +52,7 @@ const AppDetails = () => {
           </div>
 
           <button 
-            className={`p-2 w-[200px] mt-[3rem] rounded-[5px] ${
+            className={`p-2 w-[200px] mt-[3rem] rounded-[5px] hover:scale-[1.04] duration-500 hover:shadow-xl hover:shadow-[#54CF68] ${
               isInstalled ? "bg-gray-400 text-white cursor-not-allowed" : "bg-[#54CF68] text-white"
             }`}
             onClick={() => !isInstalled && installApp(targetApp)}

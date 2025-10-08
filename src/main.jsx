@@ -7,6 +7,7 @@ import Apps from "./Apps.jsx";
 import Install from "./Install.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppDetails from "./AppDetails.jsx";
+import { InstallProvider } from "./App.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+   
+    <InstallProvider>
+      <RouterProvider router={router} />
+    </InstallProvider>
   </StrictMode>
 );
