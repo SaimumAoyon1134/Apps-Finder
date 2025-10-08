@@ -47,7 +47,7 @@ export class Navbar extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="bg-gradient-to-tr from-[#632EE3] to-[#9F62F2] text-white px-4 py-2 md:py-0 rounded hover:bg-blue-600">
+            <button className="bg-gradient-to-tr from-[#632EE3] to-[#9F62F2] text-white px-4 py-2  rounded hover:bg-blue-600">
               <GitHubIcon></GitHubIcon> Contribute
             </button>
           </a>
