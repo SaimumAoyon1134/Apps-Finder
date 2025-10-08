@@ -4,7 +4,7 @@ const Spinner = () => {
   return (
     <div className="flex justify-center items-center">
      
-      <div className="w-12 h-12 border-4 border-gray-300 border-t-[#54CF68] rounded-full animate-spin"></div>
+      <div className="w-30 h-30 border-10 border-gray-300 border-t-[#54CF68] rounded-full animate-spin"></div>
     </div>
   );
 };
