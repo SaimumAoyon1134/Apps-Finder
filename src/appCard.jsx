@@ -6,8 +6,8 @@ const appCard = ({ app, cardClick }) => {
 
   return (
     <div className="bg-white rounded-2xl flex flex-col p-1 items-center justify-center  hover:scale-[1.04] duration-500 hover:shadow-2xl hover:shadow-[#9F62F2] " onClick={() => cardClick(app)}>
-      <img src={image} alt=""  className="rounded-2xl " />
-      <p className="pt-[5px] text-gray-600">{title}</p>
+      <img src={image} alt=""  className="rounded-2xl shadow-xl shadow-gray-500" />
+      <p className="pt-[5px] font-extrabold text-2xl text-gray-600">{title}</p>
       <div className="flex justify-between w-full px-3 pt-2 pb-1">
         <div className="bg-[rgb(245,245,245)] flex rounded-full p-1">
           <ArrowDownwardIcon></ArrowDownwardIcon>

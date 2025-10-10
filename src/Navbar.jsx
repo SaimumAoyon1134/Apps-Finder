@@ -43,7 +43,7 @@ export class Navbar extends Component {
         </div>
         <div>
           <a
-            href="https://github.com/"
+            href="https://github.com/SaimumAoyon1134"
             target="_blank"
             rel="noopener noreferrer"
           >
